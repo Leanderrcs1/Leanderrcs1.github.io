@@ -1,164 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mira Beer Shop</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mirabeer | Premium Brews</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #0b0b0b;
-      color: #f5f5f5;
-    }
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
-    header {
-      background: linear-gradient(90deg,#000,#1a1a1a);
-      padding: 20px;
-      text-align: center;
-      font-size: 26px;
-      font-weight: 600;
-      letter-spacing: 1px;
-    }
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 25px;
-      background: #111;
-      padding: 12px;
-    }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0e0e0e;
+            color: #ffffff;
+        }
 
-    nav a {
-      color: #ddd;
-      text-decoration: none;
-      font-size: 14px;
-    }
+        header {
+            padding: 30px 50px;
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            border-bottom: 1px solid #222;
+        }
 
-    .hero {
-      text-align: center;
-      padding: 90px 20px;
-      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)),
-      url('https://i.ibb.co/xqW4QMxp/unnamed-1.webp');
-      background-size: cover;
-      background-position: center;
-    }
+        .container {
+            padding: 80px 50px;
+            max-width: 1000px;
+            margin: auto;
+        }
 
-    .hero h1 {
-      font-size: 38px;
-      margin-bottom: 10px;
-    }
+        h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
 
-    .hero p {
-      color: #ccc;
-      font-size: 16px;
-    }
+        p {
+            font-size: 18px;
+            color: #aaa;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
 
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 25px;
-      background: gold;
-      color: #000;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: bold;
-    }
+        .card {
+            background: #161616;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #222;
+        }
 
-    .section {
-      padding: 50px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
+        .card h2 {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
 
-    .features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
-      gap: 15px;
-    }
+        .card p {
+            margin: 5px 0;
+            color: #ccc;
+        }
 
-    .card {
-      background: #151515;
-      padding: 20px;
-      border-radius: 15px;
-      border: 1px solid #222;
-      text-align: center;
-    }
+        .btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 28px;
+            background: #ffffff;
+            color: #000;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 6px;
+            transition: 0.3s ease;
+        }
 
-    .gallery img {
-      width: 100%;
-      height: 250px;
-      object-fit: cover;
-      border-radius: 15px;
-      margin-top: 15px;
-    }
-
-    iframe {
-      margin-top: 15px;
-      border-radius: 10px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #000;
-      color: #777;
-    }
-  </style>
+        .btn:hover {
+            background: #ddd;
+        }
+    </style>
 </head>
-
 <body>
 
-<header>⚡ Mira Beer Shop</header>
+<header>
+    MIRABEER
+</header>
 
-<nav>
-  <a href="#home">Home</a>
-  <a href="#about">About</a>
-  <a href="#gallery">Gallery</a>
-  <a href="#contact">Contact</a>
-</nav>
+<div class="container">
+    <h1>Premium Beer Selection</h1>
+    <p>Crafted for those who value quality, taste, and experience. Explore a curated collection of premium brews.</p>
 
-<section id="home" class="hero">
-  <h1>Your Trusted Beer Store in Vasai Virar</h1>
-  <p>10+ varieties available • Quick service • In-store pickup</p>
-  <a class="btn" href="https://wa.me/919762287070">Check Availability</a>
-</section>
+    <div class="card">
+        <h2>Our Collection</h2>
+        <p>Classic Lager</p>
+        <p>Strong Ale</p>
+        <p>Premium Stout</p>
+    </div>
 
-<section id="about" class="section">
-  <h2>Why Choose Us</h2>
-  <div class="features">
-    <div class="card">✔ In-store Shopping</div>
-    <div class="card">✔ In-store Pickup</div>
-    <div class="card">✔ 10+ Varieties Available</div>
-    <div class="card">✔ Fast Service</div>
-    <div class="card">✔ Closes at 10:30 PM</div>
-  </div>
-</section>
-
-<section id="gallery" class="section">
-  <h2>Store Preview</h2>
-  <div class="gallery">
-    <img src="https://i.ibb.co/xqW4QMxp/unnamed-1.webp">
-    <img src="https://i.ibb.co/GfLq5SqG/unnamed-2.webp">
-    <img src="https://i.ibb.co/N26hz6rT/unnamed-3.webp">
-  </div>
-</section>
-
-<section id="contact" class="section">
-  <h2>Visit Us</h2>
-  <p>📍 Tarkhad, Digha Cross Road, Vasai Virar, Maharashtra 401201</p>
-  <p>📞 +91 97622 87070</p>
-
-  <iframe 
-    src="https://www.google.com/maps?q=Tarkhad%2C%20Digha%20Cross%20Road%2C%20Vasai%20Virar%2C%20Maharashtra%20401201&output=embed" 
-    width="100%" height="250">
-  </iframe>
-</section>
-
-<footer>
-  © 2026 Mira Beer Shop
-</footer>
+    <a href="#" class="btn">Order Now</a>
+</div>
 
 </body>
 </html>
