@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
 
     body {
       font-family: 'Poppins', sans-serif;
@@ -18,12 +18,16 @@
     }
 
     header {
+      position: sticky;
+      top: 0;
       background: linear-gradient(90deg,#000,#1a1a1a);
       padding: 25px 0;
       text-align: center;
       font-size: 28px;
       font-weight: 700;
       letter-spacing: 1px;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.7);
     }
 
     nav {
@@ -39,12 +43,10 @@
       text-decoration: none;
       font-weight: 600;
       font-size: 15px;
-      transition: 0.2s;
+      transition: 0.3s;
     }
 
-    nav a:hover {
-      color: gold;
-    }
+    nav a:hover { color: gold; }
 
     .hero {
       text-align: center;
@@ -52,6 +54,9 @@
       background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)),
                   url('https://i.ibb.co/xqW4QMxp/unnamed-1.webp') no-repeat center center;
       background-size: cover;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeIn 1s forwards;
     }
 
     .hero h1 {
@@ -79,6 +84,7 @@
 
     .btn:hover {
       background: #e6c200;
+      transform: scale(1.05);
     }
 
     .section {
@@ -108,7 +114,9 @@
       border: 1px solid #222;
       text-align: center;
       font-weight: 600;
-      transition: 0.2s;
+      transition: 0.3s;
+      opacity: 0;
+      transform: translateY(20px);
     }
 
     .card:hover {
@@ -123,16 +131,13 @@
       border-radius: 15px;
       margin-top: 15px;
       transition: 0.3s;
+      opacity: 0;
+      transform: scale(0.95);
     }
 
-    .gallery img:hover {
-      transform: scale(1.05);
-    }
+    .gallery img:hover { transform: scale(1.05); }
 
-    iframe {
-      margin-top: 15px;
-      border-radius: 10px;
-    }
+    iframe { margin-top: 15px; border-radius: 10px; }
 
     footer {
       text-align: center;
@@ -145,6 +150,10 @@
     @media(max-width:600px){
       .hero h1 { font-size: 32px; }
       .hero p { font-size: 16px; }
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
@@ -161,7 +170,7 @@
 </nav>
 
 <section id="home" class="hero">
-  <h1>Your Trusted Beer Store in Vasai Virar</h1>
+  <h1>Your Trusted Beer Store in Vasai, Tarkhad</h1>
   <p>10+ varieties available • Quick service • In-store pickup</p>
   <a class="btn" href="https://wa.me/919762287070">Check Availability</a>
 </section>
@@ -188,11 +197,11 @@
 
 <section id="contact" class="section">
   <h2>Visit Us</h2>
-  <p>Tarkhad, Digha Cross Road, Vasai Virar, Maharashtra 401201</p>
+  <p>Tarkhad, Digha Cross Road, Vasai, Maharashtra 401201</p>
   <p>+91 97622 87070</p>
 
   <iframe 
-    src="https://www.google.com/maps?q=Tarkhad%2C%20Digha%20Cross%20Road%2C%20Vasai%20Virar%2C%20Maharashtra%20401201&output=embed" 
+    src="https://www.google.com/maps?q=Tarkhad%2C%20Digha%20Cross%20Road%2C%20Vasai%2C%20Maharashtra%20401201&output=embed" 
     width="100%" height="250">
   </iframe>
 </section>
@@ -200,6 +209,23 @@
 <footer>
   © 2026 Mira Beer Shop
 </footer>
+
+<script>
+  // Fade-in cards and gallery images on scroll
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0) scale(1)';
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  document.querySelectorAll('.card, .gallery img').forEach(el => {
+    observer.observe(el);
+  });
+</script>
 
 </body>
 </html>
