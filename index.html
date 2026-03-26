@@ -1,172 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mira Beer Shop</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<title>Mira Beer Shop</title>
 
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: #0b0b0b;
-      color: #f5f5f5;
-    }
+<style>
 
-    header {
-      position: sticky;
-      top: 0;
-      background: linear-gradient(90deg,#000,#1a1a1a);
-      padding: 25px 0;
-      text-align: center;
-      font-size: 28px;
-      font-weight: 700;
-    }
+* {margin:0;padding:0;box-sizing:border-box;}
 
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      background: #111;
-      padding: 15px 0;
-    }
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #0b0b0b;
+  color: #fff;
+}
 
-    nav a {
-      color: #ccc;
-      text-decoration: none;
-      font-weight: 600;
-    }
+/* HEADER */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg,#000,#1a1a1a);
+  padding: 15px;
+}
 
-    nav a:hover { color: gold; }
+.logo {
+  height: 50px;
+}
 
-    .hero {
-      text-align: center;
-      padding: 100px 20px;
-      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)),
-      url('https://i.ibb.co/xqW4QMxp/unnamed-1.webp') center/cover;
-      animation: fadeIn 1s forwards;
-      opacity: 0;
-    }
+/* NAV */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  background: #111;
+  padding: 12px;
+}
 
-    .hero h1 {
-      font-size: 42px;
-      margin-bottom: 15px;
-    }
+nav a {
+  color: #ccc;
+  text-decoration: none;
+  font-weight: 600;
+}
 
-    .hero p {
-      color: #aaa;
-      margin-bottom: 30px;
-    }
+nav a:hover {
+  color: gold;
+}
 
-    .btn {
-      display: inline-block;
-      padding: 14px 32px;
-      background: gold;
-      color: #000;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: 700;
-      transition: 0.3s;
-      margin: 5px;
-    }
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background:
+  linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)),
+  url('https://i.ibb.co/xqW4QMxp/unnamed-1.webp');
+  background-size: cover;
+  background-position: center;
+}
 
-    .btn:hover {
-      transform: scale(1.05);
-      background: #e6c200;
-    }
+.hero h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
 
-    .section {
-      padding: 60px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
+.hero p {
+  color: #aaa;
+  margin-bottom: 25px;
+}
 
-    h2 {
-      text-align: center;
-      margin-bottom: 30px;
-      font-size: 32px;
-    }
+/* BUTTONS */
+.btn {
+  display: inline-block;
+  padding: 14px 30px;
+  margin: 8px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: 0.3s;
+}
 
-    .features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px,1fr));
-      gap: 20px;
-    }
+.btn.whatsapp {
+  background: gold;
+  color: black;
+}
 
-    .card {
-      background: #151515;
-      padding: 25px;
-      border-radius: 15px;
-      border: 1px solid #222;
-      transition: 0.3s;
-      position: relative;
-    }
+.btn.map {
+  background: #5a2ea6;
+  color: white;
+}
 
-    .card h3 {
-      font-size: 18px;
-      margin-bottom: 8px;
-    }
+.btn:hover {
+  transform: scale(1.05);
+}
 
-    .card p {
-      font-size: 14px;
-      color: #aaa;
-    }
+/* SECTION */
+.section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
 
-    .card:hover {
-      transform: translateY(-6px);
-      border-color: gold;
-    }
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
 
-    .card.highlight {
-      border: 1px solid gold;
-    }
+/* FEATURES */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap: 20px;
+}
 
-    .card.highlight h3 {
-      color: gold;
-    }
+.card {
+  background: #151515;
+  padding: 25px;
+  border-radius: 15px;
+  border: 1px solid #222;
+  transition: 0.3s;
+}
 
-    .gallery img {
-      width: 100%;
-      height: 250px;
-      object-fit: cover;
-      border-radius: 15px;
-      margin-top: 15px;
-      transition: 0.3s;
-    }
+.card:hover {
+  transform: translateY(-5px);
+  border-color: gold;
+}
 
-    .gallery img:hover {
-      transform: scale(1.05);
-    }
+.card.highlight {
+  border: 1px solid gold;
+}
 
-    iframe {
-      margin-top: 15px;
-      border-radius: 10px;
-    }
+/* GALLERY */
+.gallery img {
+  width: 100%;
+  border-radius: 12px;
+  margin-top: 15px;
+}
 
-    footer {
-      text-align: center;
-      padding: 25px;
-      background: #000;
-      color: #777;
-    }
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #000;
+  color: #777;
+}
 
-    @keyframes fadeIn {
-      to { opacity: 1; }
-    }
-
-    @media(max-width:600px){
-      .hero h1 { font-size: 32px; }
-    }
-  </style>
+</style>
 </head>
 
 <body>
 
-<header>MIRA BEER SHOP</header>
+<!-- HEADER -->
+<header class="header">
+  <img src="logo.png" class="logo">
+</header>
 
+<!-- NAV -->
 <nav>
   <a href="#home">Home</a>
   <a href="#about">About</a>
@@ -174,19 +165,21 @@
   <a href="#contact">Contact</a>
 </nav>
 
+<!-- HERO -->
 <section id="home" class="hero">
-  <h1>Your Trusted Beer Store in Vasai, Tarkhad</h1>
-  <p>10+ varieties available • Quick service • In-store pickup</p>
+  <h1>Premium Beers, Quick Service</h1>
+  <p>Your trusted beer store in Vasai, Tarkhad</p>
 
-  <a class="btn" href="https://wa.me/919762287070?text=Hi%2C%20I%20want%20to%20check%20beer%20availability" target="_blank">
-    Check Availability
+  <a class="btn whatsapp" href="https://wa.me/919762287070?text=Hi%2C%20I%20want%20to%20check%20beer%20availability">
+    WhatsApp Us
   </a>
 
-  <a class="btn" href="https://www.google.com/maps?q=19.356161,72.801196" target="_blank">
+  <a class="btn map" href="https://www.google.com/maps?q=19.356161,72.801196" target="_blank">
     Get Directions
   </a>
 </section>
 
+<!-- FEATURES -->
 <section id="about" class="section">
   <h2>Why Choose Us</h2>
 
@@ -218,6 +211,7 @@
   </div>
 </section>
 
+<!-- GALLERY -->
 <section id="gallery" class="section">
   <h2>Store Preview</h2>
   <div class="gallery">
@@ -227,6 +221,7 @@
   </div>
 </section>
 
+<!-- CONTACT -->
 <section id="contact" class="section">
   <h2>Visit Us</h2>
 
@@ -237,7 +232,7 @@
     Open Daily: 10:00 AM – 10:30 PM
   </p>
 
-  <a class="btn" href="https://www.google.com/maps?q=19.356161,72.801196" target="_blank">
+  <a class="btn map" href="https://www.google.com/maps?q=19.356161,72.801196" target="_blank">
     Open in Google Maps
   </a>
 
