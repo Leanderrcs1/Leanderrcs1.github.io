@@ -9,8 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
-
-* {margin:0;padding:0;box-sizing:border-box;}
+* { margin:0; padding:0; box-sizing:border-box; }
 
 body {
   font-family: 'Poppins', sans-serif;
@@ -20,22 +19,23 @@ body {
 
 /* HEADER */
 .header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background: linear-gradient(90deg,#000,#1a1a1a);
-  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  border-bottom: 1px solid #222;
 }
 
-.logo {
-  height: 50px;
+.header img {
+  height: 48px;
 }
 
 /* NAV */
 nav {
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 25px;
   background: #111;
   padding: 12px;
 }
@@ -62,7 +62,7 @@ nav a:hover {
 }
 
 .hero h1 {
-  font-size: 40px;
+  font-size: 38px;
   margin-bottom: 10px;
 }
 
@@ -74,8 +74,8 @@ nav a:hover {
 /* BUTTONS */
 .btn {
   display: inline-block;
-  padding: 14px 30px;
-  margin: 8px;
+  padding: 14px 28px;
+  margin: 6px;
   border-radius: 30px;
   text-decoration: none;
   font-weight: 700;
@@ -147,6 +147,11 @@ footer {
   color: #777;
 }
 
+/* MOBILE */
+@media(max-width:600px){
+  .hero h1 { font-size: 30px; }
+  .header img { height: 40px; }
+}
 </style>
 </head>
 
@@ -154,7 +159,7 @@ footer {
 
 <!-- HEADER -->
 <header class="header">
-  <img src="logo.png" class="logo">
+  <img src="logo.png" alt="Mira Beer Shop">
 </header>
 
 <!-- NAV -->
